@@ -45361,9 +45361,36 @@ function _kefGetEndingImageEl() {
   return imageContainer.querySelector("img");
 }
 
+function _kefApplyEndingThemeFrame() {
+  if (typeof document === "undefined") return;
+
+  const resultsContainer = document.querySelector("#results_container");
+  if (resultsContainer) {
+    Object.assign(resultsContainer.style, {
+      color: "#000000"
+    });
+  }
+
+  const desc = document.querySelector("#final_results_description");
+  const endingWindow = desc ? desc.closest(".inner_window_w_desc") : null;
+  if (endingWindow) {
+    Object.assign(endingWindow.style, {
+      backgroundColor: "#4e6165",
+      border: "2px double #C9C9C9",
+      color: "#000000"
+    });
+  }
+
+  const gameWindow = document.querySelector("#game_window");
+  if (gameWindow) {
+    gameWindow.style.backgroundColor = "#333c42";
+  }
+}
+
 function _kefStyleEndingDescription() {
   const desc = document.querySelector("#final_results_description");
   if (!desc) return;
+  _kefApplyEndingThemeFrame();
   Object.assign(desc.style, {
     textAlign: "left",
     width: "72%",
@@ -45378,11 +45405,32 @@ function _kefStyleEndingDescription() {
     overflowWrap: "anywhere",
     wordBreak: "break-word",
     transform: "translateZ(0)",
-    backgroundColor: "#fbfaf6",
-    color: "#1f1b16",
-    border: "2px solid #6f4f2a",
-    borderRadius: "4px",
-    padding: "10px"
+    backgroundColor: "#F8F8F8",
+    color: "#000000",
+    border: "3px double #C9C9C9",
+    borderRadius: "1px",
+    padding: "10px",
+    boxShadow: "inset 0 0 4px rgba(0, 0, 0, 0.08), 0 0 0 2px rgba(0, 0, 0, 0.04)"
+  });
+
+  desc.querySelectorAll("h3").forEach((heading) => {
+    Object.assign(heading.style, {
+      backgroundColor: "#c1c4c6",
+      color: "#11152c",
+      border: "1px solid #C9C9C9",
+      padding: "6px 8px",
+      margin: "0 0 10px 0",
+      textAlign: "center",
+      fontWeight: "bold"
+    });
+  });
+
+  desc.querySelectorAll("h4").forEach((subheading) => {
+    Object.assign(subheading.style, {
+      color: "#11152c",
+      margin: "0 0 8px 0",
+      textAlign: "center"
+    });
   });
 }
 
@@ -45397,10 +45445,19 @@ function _kefApplyEndingImage(slide) {
   }
 
   imageEl.style.display = "block";
-  imageEl.style.border = "3px solid #6f4f2a";
+  imageEl.style.border = "3px double #C9C9C9";
+  imageEl.style.backgroundColor = "#333c42";
   imageEl.style.width = "210px";
   imageEl.style.height = "250px";
   imageEl.style.objectFit = "cover";
+  imageEl.style.boxShadow = "0 0 0 2px rgba(0, 0, 0, 0.08)";
+
+  if (imageEl.parentNode && imageEl.parentNode.style) {
+    Object.assign(imageEl.parentNode.style, {
+      backgroundColor: "#333c42",
+      borderColor: "#C9C9C9"
+    });
+  }
 
   if (slide.image && imageEl.getAttribute("src") !== slide.image) {
     imageEl.src = slide.image;
@@ -45442,11 +45499,12 @@ function _kefApplyEndingButtons() {
 
   btnContainer.querySelectorAll("button").forEach((btn) => {
     Object.assign(btn.style, {
-      backgroundColor: "#6f4f2a",
-      border: "1px solid #6f4f2a",
-      color: "#ffffff",
+      backgroundColor: "#2e4976",
+      border: "2px double #C9C9C9",
+      color: "#F8F8F8",
       padding: "4px 10px",
-      cursor: "pointer"
+      cursor: "pointer",
+      fontWeight: "bold"
     });
   });
 }
