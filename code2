@@ -13,7 +13,7 @@ campaignTrail_temp.questions_json = [
         "pk": 328,
         "fields": {
             "priority": 0,
-            "description": "Texas Governor Allan Shivers, a powerhouse in the party with a massive delegation bloc, corners your aides at the hotel bar. “Estes, you want my boys? Back the Tidelands Bill. Give Texas our God-given offshore oil — end Truman’s federal land grab.” You stare at Shivers. You see a future where you are in the Oval Office if you shake his hand, but also feel an abject hollowness.\n",
+            "description": "Texas Governor Allan Shivers, a powerhouse in the party with a massive delegation bloc, corners your aides at the hotel bar. “Estes, you want my boys? Back the Tidelands Bill. Give Texas our God-given offshore oil and end Truman’s federal land grab.” You stare at Shivers. You see a future where you are in the Oval Office if you shake his hand, but also feel an abject hollowness.\n",
             "likelihood": 1
         }
     },
@@ -31,7 +31,7 @@ campaignTrail_temp.questions_json = [
         "pk": 256,
         "fields": {
             "priority": 1,
-            "description": "Senator, this is the part of the process where the sausage gets made. You’re so close you can almost taste it. Your advisors are in a frenzy; they’re split on which issue you should — and can — afford to compromise on to lock up the nomination. It’s ugly, back-room horse-trading at its worst, but that’s how Chicago works. What’s your play, Estes?\n",
+            "description": "Senator, this is the part of the process where the sausage gets made. You’re so close you can almost taste it. Your advisors are in a frenzy; they’re split on which issue you can afford to compromise on to lock up the nomination. It’s ugly, back-room horse-trading at its worst, but that’s how Chicago works. What’s your play, Estes?\n",
             "likelihood": 1
         }
     },
@@ -103,7 +103,7 @@ campaignTrail_temp.questions_json = [
         "pk": 266,
         "fields": {
             "priority": 2,
-            "description": "The Republican campaign is hammering away at “creeping socialism” under Truman, and even some Democrats are grumbling about ballooning federal budgets from the New Deal and Fair Deal programs. Taft promises deep cuts to restore fiscal sanity — will you pivot towards belt-tightening to appease the fiscal hawks in your own party?\n\n",
+            "description": "The Republican campaign is hammering away at “creeping socialism” under Truman, and even some Democrats are grumbling about ballooning federal budgets from the New Deal and Fair Deal programs. Taft promises deep cuts to restore fiscal sanity. Will you pivot towards belt-tightening to appease the fiscal hawks in your own party?\n\n",
             "likelihood": 1
         }
     },
@@ -139,7 +139,7 @@ campaignTrail_temp.questions_json = [
         "pk": 289,
         "fields": {
             "priority": 2,
-            "description": " Sen. Kefauver, many Americans fear that if we allow communists to prevail in Korea, it will trigger a ‘falling domino’ effect — first in Korea, then Indochina, Southeast Asia, and eventually threaten our allies and our own security. Do you believe this domino theory holds true?\n",
+            "description": " Sen. Kefauver, many Americans fear that if we allow communists to prevail in Korea, it will trigger a ‘falling domino’ effect, first in Korea, then Indochina, Southeast Asia, and eventually threaten our allies and our own security. Do you believe this domino theory holds true?\n",
             "likelihood": 1
         }
     },
@@ -229,7 +229,7 @@ campaignTrail_temp.questions_json = [
         "pk": 8869,
         "fields": {
             "priority": 0,
-            "description": "A Taft surrogate appears on the Sunday programs doubling down on yesterday’s radio attack — and then pivots to your running mate Franklin Roosevelt Jr., whose smile doesn’t reach his eyes. “Congressman Roosevelt has missed more votes in Congress than perhaps any man of his generation. He is his father’s name and little else. America deserves a vice president who earned his seat, not inherited it.”\n",
+            "description": "A Taft surrogate appears on the Sunday programs doubling down on yesterday’s radio attack, then pivots to your running mate Franklin Roosevelt Jr., whose smile doesn’t reach his eyes. “Congressman Roosevelt has missed more votes in Congress than perhaps any man of his generation. He is his father’s name and little else. America deserves a vice president who earned his seat, not inherited it.”\n",
             "likelihood": 1
         }
     },
@@ -238,7 +238,7 @@ campaignTrail_temp.questions_json = [
         "pk": 8877,
         "fields": {
             "priority": 0,
-            "description": "With four days remaining, a local journalist in a diner in Columbus, Ohio — the kind of man whose byline nobody reads but everybody trusts — asks you a simple question over coffee: “Senator, forget the speeches. What kind of president do you actually want to be?”\n\n",
+            "description": "With four days remaining, a local journalist in a diner in Columbus, Ohio, the kind of man whose byline nobody reads but everybody trusts, asks you a simple question over coffee: “Senator, forget the speeches. What kind of president do you actually want to be?”\n\n",
             "likelihood": 1
         }
     },
@@ -315,7 +315,7 @@ campaignTrail_temp.answers_json = [
         "pk": 1658,
         "fields": {
             "question": 253,
-            "description": " You want Truman’s blessing? Let’s adopt his Fair Deal agenda. Put the President on the spot — call for an extension to social security and housing. Let’s make him sweat."
+            "description": " You want Truman’s blessing? Let’s adopt his Fair Deal agenda. Put the President on the spot: call for an extension to social security and housing. Let’s make him sweat."
         }
     },
     {
@@ -531,7 +531,7 @@ campaignTrail_temp.answers_json = [
         "pk": 1706,
         "fields": {
             "question": 266,
-            "description": "Big money corrupts Washington spending — it’s time to cut the fat. Americans need to rediscover their yeoman farmer spirit."
+            "description": "Big money corrupts Washington spending. It’s time to cut the fat. Americans need to rediscover their yeoman farmer spirit."
         }
     },
     {
@@ -595,7 +595,7 @@ campaignTrail_temp.answers_json = [
         "pk": 1735,
         "fields": {
             "question": 274,
-            "description": "I’m universally opposed to any law motivated by bias or discrimination against races or religion — this betrays our Democratic traditions and exposes us to ridicule. What are we afraid of?"
+            "description": "I’m universally opposed to any law motivated by bias or discrimination against races or religion. This betrays our Democratic traditions and exposes us to ridicule. What are we afraid of?"
         }
     },
     {
@@ -643,7 +643,7 @@ campaignTrail_temp.answers_json = [
         "pk": 1745,
         "fields": {
             "question": 277,
-            "description": "Ma’am, I feel your pain deeply — I’ve answered countless questions from mothers and fathers wondering the same thing as you are. Look, we’re fighting a war to serve our greater interests, to protect us from a menace that seeks to undermine our way of life. But this war won’t be won on the battlefield alone. It is to be won through global, strategic pressure we’ll apply to the Chinese and Soviets to force a settlement. We won’t abandon our allies or our principles, but we’ll end this honorably through diplomacy."
+            "description": "Ma’am, I feel your pain deeply. I’ve answered countless questions from mothers and fathers wondering the same thing as you are. Look, we’re fighting a war to serve our greater interests, to protect us from a menace that seeks to undermine our way of life. But this war won’t be won on the battlefield alone. It is to be won through global, strategic pressure we’ll apply to the Chinese and Soviets to force a settlement. We won’t abandon our allies or our principles, but we’ll end this honorably through diplomacy."
         }
     },
     {
@@ -659,7 +659,7 @@ campaignTrail_temp.answers_json = [
         "pk": 1747,
         "fields": {
             "question": 277,
-            "description": "This stalemate serves no one but the communists. I’ll go to Korea myself if I must, sit down with all parties, and secure an immediate ceasefire — even if it means accepting the current lines."
+            "description": "This stalemate serves no one but the communists. I’ll go to Korea myself if I must, sit down with all parties, and secure an immediate ceasefire, even if it means accepting the current lines."
         }
     },
     {
@@ -723,7 +723,7 @@ campaignTrail_temp.answers_json = [
         "pk": 1786,
         "fields": {
             "question": 289,
-            "description": " The domino theory is not merely a theory, but also a warning. We must escalate, only when necessary — more troops, more resources — to ensure Korea doesn’t fall and start the chain reaction that could engulf Asia."
+            "description": " The domino theory is not merely a theory, but also a warning. We must escalate, only when necessary, with more troops and more resources, to ensure Korea doesn’t fall and start the chain reaction that could engulf Asia."
         }
     },
     {
@@ -739,7 +739,7 @@ campaignTrail_temp.answers_json = [
         "pk": 1792,
         "fields": {
             "question": 291,
-            "description": " The American worker built this post-war prosperity with sweat and sacrifice. A fair minimum wage of $1.25 isn’t charity — it’s justice, ensuring families can afford the basics without government handouts."
+            "description": " The American worker built this post-war prosperity with sweat and sacrifice. A fair minimum wage of $1.25 isn’t charity; it’s justice, ensuring families can afford the basics without government handouts."
         }
     },
     {
@@ -747,7 +747,7 @@ campaignTrail_temp.answers_json = [
         "pk": 1793,
         "fields": {
             "question": 291,
-            "description": " We’ve lifted millions out of poverty through fair labor standards. A dollar an hour is a reasonable step forward — rewarding hard work while keeping our economy strong and competitive."
+            "description": " We’ve lifted millions out of poverty through fair labor standards. A dollar an hour is a reasonable step forward, rewarding hard work while keeping our economy strong and competitive."
         }
     },
     {
@@ -787,7 +787,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3254,
         "fields": {
             "question": 327,
-            "description": "We don’t fight the bosses — we outfox them! A deal here, a promise there, and their house of cards comes tumbling down."
+            "description": "We don’t fight the bosses; we outfox them! A deal here, a promise there, and their house of cards comes tumbling down."
         }
     },
     {
@@ -803,7 +803,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3256,
         "fields": {
             "question": 328,
-            "description": "I’m sorry, Governor — these Tidelands are America’s, not Texas’s private piggy bank."
+            "description": "I’m sorry, Governor. These Tidelands are America’s, not Texas’s private piggy bank."
         }
     },
     {
@@ -819,7 +819,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3263,
         "fields": {
             "question": 330,
-            "description": "The Communist Party ain’t no social club — it’s a conspiracy against America! We’ll make membership a crime and send the reds packing."
+            "description": "The Communist Party ain’t no social club. It’s a conspiracy against America! We’ll make membership a crime and send the reds packing."
         }
     },
     {
@@ -931,7 +931,7 @@ campaignTrail_temp.answers_json = [
         "pk": 8829,
         "fields": {
             "question": 291,
-            "description": "The minimum wage as it currently stands is sufficient. Blanket hikes would only hurt small businesses; let’s focus on targeted help — like tax relief for working families — to ease the burden without disrupting growth."
+            "description": "The minimum wage as it currently stands is sufficient. Blanket hikes would only hurt small businesses; let’s focus on targeted help, like tax relief for working families, to ease the burden without disrupting growth."
         }
     },
     {
@@ -979,7 +979,7 @@ campaignTrail_temp.answers_json = [
         "pk": 8861,
         "fields": {
             "question": 8860,
-            "description": "This isn’t a mystery. You take fathers away to war, you bring them back broken or not at all, you pack families into overcrowded cities with no parks and no prospects — and you’re surprised the kids are angry? We need investment in communities, not just condemnation of children."
+            "description": "This isn’t a mystery. You take fathers away to war, you bring them back broken or not at all, you pack families into overcrowded cities with no parks and no prospects, and you’re surprised the kids are angry? We need investment in communities, not just condemnation of children."
         }
     },
     {
@@ -6131,7 +6131,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 24,
             "state": 132,
-            "state_multiplier": 0.79987
+            "state_multiplier": 0.80487
         }
     },
     {
@@ -6248,7 +6248,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 24,
             "state": 119,
-            "state_multiplier": 0.8416
+            "state_multiplier": 0.8261
         }
     },
     {
@@ -6680,7 +6680,7 @@ campaignTrail_temp.candidate_state_multiplier_json = [
         "fields": {
             "candidate": 23,
             "state": 119,
-            "state_multiplier": 0.8292
+            "state_multiplier": 0.8342
         }
     },
     {
@@ -44403,7 +44403,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 8863,
             "candidate": 23,
-            "answer_feedback": "Half the country nods. The other half — the ones actually raising kids in cramped city apartments on one income — do not"
+            "answer_feedback": "Half the country nods. The other half, the ones actually raising kids in cramped city apartments on one income, do not"
         }
     },
     {
@@ -44448,7 +44448,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 8873,
             "candidate": 23,
-            "answer_feedback": "He does speak for himself — on three separate programs, with three slightly different answers. You love the man, but this was not his finest weekend"
+            "answer_feedback": "He does speak for himself, on three separate programs, with three slightly different answers. You love the man, but this was not his finest weekend"
         }
     },
     {
