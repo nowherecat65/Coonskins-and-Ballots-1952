@@ -55,24 +55,6 @@ campaignTrail_temp.questions_json = [
     },
     {
         "model": "campaign_trail.question",
-        "pk": 252,
-        "fields": {
-            "priority": 1,
-            "description": "What is your overall position on the Vietnam War?",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
-        "pk": 254,
-        "fields": {
-            "priority": 1,
-            "description": "What is your opinion of Lyndon Johnson's new Medicare program?",
-            "likelihood": 1
-        }
-    },
-    {
-        "model": "campaign_trail.question",
         "pk": 330,
         "fields": {
             "priority": 1,
