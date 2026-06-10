@@ -44982,49 +44982,6 @@ var changeGameDisp = (hide) => {
 
 
 
-    if(e.running_mate_last_name==="Borah"){
-            console.log(campaignTrail_temp.questions_json[5])
-        campaignTrail_temp.questions_json[5] = {
-        "model": "campaign_trail.question",
-        "pk": 3058094,
-        "fields": {
-          "priority": 1,
-          "description": "You've steered the convention to select William Borah as the nominee. Given the policy differences between you two - why?",
-          "likelihood": 1
-        }
-      }
-        var button1 = document.getElementById('view_electoral_map');
-
-
-
-
-
-
-
-
-        button1.click();
-
-
-
-
-
-
-
-
-        setTimeout(function(){
-        var button2 = document.getElementById('resume_questions_button');
-        button2.click();
-        }, 50);
-        console.log(campaignTrail_temp.questions_json[7])
-        }
-
-
-
-
-
-
-
-
         $("#inner_window_4").remove();
         changeGameDisp(false);
     })
@@ -45054,7 +45011,56 @@ var changeGameDisp = (hide) => {
 
 
 
+  function _currentAnswerPk() {
+    return Number(e.player_answers[e.player_answers.length - 1]);
+  }
+
+
+
+
+
+
+
+
+  function _endGameNow() {
+    e.question_number = e.questions_json.length - 1;
+    return true;
+  }
+
+
+
+
+
+
+
+
+  function _selectedRunningMateName() {
+    const rm = e.selected_running_mate;
+    if (!rm || !rm.fields) return "";
+    return `${rm.fields.first_name || ""} ${rm.fields.last_name || ""}`.toLowerCase();
+  }
+
+
+
+
+
+
+
+
+  function _selectedFdrJr() {
+    const name = _selectedRunningMateName();
+    return name.includes("roosevelt") || name.includes("fdr");
+  }
+
+
+
+
+
+
+
+
   cyoAdventure = (a) => {
+    const ans = _currentAnswerPk();
 
 
 
@@ -45063,11 +45069,208 @@ var changeGameDisp = (hide) => {
 
 
 
-          if (e.question_number == 4) {
-        window.setTimeout(e.vpSwitcher, 20)
-      }
+    // Convention failure answers. These should proceed straight to the ending screen.
+    if ([3251, 3253, 3256].includes(ans)) {
+      return _endGameNow();
+    }
+
+
+
+
+
+
+
+
+    // Open the custom running-mate selector immediately after the acceptance speech.
+    if (e.question_number == 4) {
+      window.setTimeout(e.vpSwitcher, 20);
+      return false;
+    }
+
+
+
+
+
+
+
+
+    // The Franklin Roosevelt Jr. attack question should only appear if he is actually on the ticket.
+    // If another running mate was chosen, skip from the juvenile-delinquency question to the presidency-style question.
+    if ([8861, 8862, 8863, 8867].includes(ans) && !_selectedFdrJr()) {
+      e.question_number = getJumpIndexFromPk(8877);
+      return true;
+    }
+
+
+
+
+
+
+
+
+    return false;
   }
 //#endcode
+
+
+
+
+
+
+
+
+function _kefEnding(title, paragraphs) {
+  return `<div class="kefauver-ending"><h2>${title}</h2>${paragraphs.map(p => `<p>${p}</p>`).join("\n")}</div>`;
+}
+
+function _kefEndingWithSections(title, sections) {
+  return `<div class="kefauver-ending"><h2>${title}</h2>${sections.map(section => {
+    const header = section.title ? `<h3>${section.title}</h3>` : "";
+    const body = section.paragraphs.map(p => `<p>${p}</p>`).join("\n");
+    return `${header}${body}`;
+  }).join("\n<hr>\n")}</div>`;
+}
+
+function _kefHasAnswer(answerList) {
+  const chosen = new Set((campaignTrail_temp.player_answers || []).map(Number));
+  return answerList.some(pk => chosen.has(Number(pk)));
+}
+
+function _kefEndingKefauverWin() {
+  return _kefEndingWithSections("Kefauver Pulls Off the Upset, Defeats Taft in 1952", [
+    {
+      title: "Final Electoral Vote",
+      paragraphs: [
+        "Estes Kefauver (D-TN) / Franklin Roosevelt Jr. - 312",
+        "Robert A. Taft (R-OH) / Richard Nixon - 219",
+        "Popular Vote: Kefauver 51.8%, Taft 47.4%, Others 0.8%"
+      ]
+    },
+    {
+      title: "The Chief Crimebuster Becomes Commander-in-Chief",
+      paragraphs: [
+        "In one of the closest and most ideologically charged elections since 1916, you have defeated Ohio Senator Robert A. Taft to become the 34th President of the United States. Riding a wave of anti-corruption sentiment, your fragile alliance with Texas Governor Allan Shivers has held enough of the South in line, while Nixon's eleventh-hour betrayal of Eisenhower has left Taft exposed in the Northeast. Your party has made gains in Congress as well, taking the House and Senate by slim margins.",
+        "The Chief Crimebuster has become Commander-in-Chief. Will you carry the spirit of your organized crime hearings into the White House and tighten the screws on Frank Costello and his kind? Will you pivot domestically, revive FDR's legacy, and fight for a Second New Deal? Or will you saber-rattle with the Soviets now that they have the bomb?",
+        "The office is yours, Mr. Kefauver. It is up to you what you do with it."
+      ]
+    },
+    {
+      title: "The Legacy of the Kefauver Presidency, 1963",
+      paragraphs: [
+        "Estes Kefauver served two terms in the White House, battling a divided legislature while remaining preoccupied with an escalating Cold War.",
+        "Mr. Kefauver appointed five Supreme Court justices in his eight years of service. Jerome Frank defended the legacy of FDR's New Deal and Kefauver's attempts to strengthen it. Abe Fortas proved the sharpest of Kefauver's appointments. Robert S. Kerr kept the South reassured. Adlai Stevenson, after giving up his own presidential ambitions, accepted a lifetime appointment to uphold Democratic ideals.",
+        "One critique that dogged Kefauver was his perceived appeasement of the South. As civil rights groups gained influence and the black middle class pushed the movement from nuisance to crisis in his eyes, the most contentious fight came over William Hastie, a brilliant African American jurist and former federal judge. His 1958 nomination sparked Southern outrage and filibuster threats, but Kefauver stood firm, using a recess appointment to force it through.",
+        "Mr. Kefauver saw the swift end of the Korean conflict and avoided large-scale commitments, having watched Truman's power crumble under the weight of overreach overseas. Kefauver sought diplomacy and did not flinch when the right called him an appeaser. The American people rewarded his fortitude with a second term.",
+        "Overall, Kefauver's eight years left Washington a little cleaner, slowed the conservative resurgence, and laid the groundwork for stronger consumer and regulatory protections as the country moved toward the 1960s. He was not a man of grand vision, but he was a bridge to a brighter future, folksy yet principled, and proof that an outsider-insider could govern effectively."
+      ]
+    },
+    {
+      title: "The Last Coonskin in Washington",
+      paragraphs: [
+        "Legend has it that when John F. Kennedy arrived in the White House, Kefauver's coonskin cap was left behind in a closet, either deliberately or by accident. At the peak of the Cuban Missile Crisis, on a rainy night, Robert Kennedy stepped into the seldom-used closet off the Oval Office corridor to grab a fresh shirt for yet another late-night ExComm session.",
+        "He found the slightly moth-eaten coonskin cap and placed it on his head. If his brother had walked in and seen him wearing it, Bobby would never have heard the end of it. He smiled, remembering the gift the outgoing president had left for the incoming one. John had called it 'the last coonskin in Washington,' and somehow it never made its way back to Tennessee.",
+        "With the cap still on his head, Bobby saw his reflection in the darkened window, exhausted eyes and tie askew, and let out a short, incredulous laugh. 'Jesus, Estes,' he muttered, 'if only this thing came with a magic bullet for Khrushchev.'",
+        "He set it back on the shelf, tail carefully tucked, and closed the door. There was a new crisis that demanded an outsider-insider's touch.",
+        "The coonskin cap remained forgotten until the Lyndon Johnson administration. In 1967, as Vietnam slipped slowly from Johnson's fingers, he held the cap and saw a relic of calmer political battles. It remained an antique, displayed by presidents who saw something of themselves in Kefauver. In 2027, the Estes Kefauver Library at the University of Tennessee demanded President Donald Trump return it. Trump responded by giving it to Bibi Netanyahu."
+      ]
+    }
+  ]);
+}
+
+function _kefEndingContingent() {
+  return _kefEnding("Nation Faces Historic Contingent Election in House", [
+    "No candidate has secured the 266 electoral votes needed for a majority. Taft is expected to prevail, but Kefauver remains viable.",
+    "Perhaps the ultimate irony of two men seeking the presidency with such zeal is that yesterday's election produced no true winner. Both candidates now enter a stage of limbo where the ballot box is swapped for horse-trading, while the American people sit on their hands and wait for shadowy figures in smoke-filled rooms to declare the nation's next commander-in-chief.",
+    "What hurt both Kefauver and Taft was how they managed the margins. Kefauver saw the threat of a Richard Russell insurgency and acted accordingly. Taft saw the Eastern Establishment as enemies within the party and dared them to bolt. Both factors left them on the outside looking in.",
+    "Outgoing President Truman is expected to meet with Kefauver. He will grind his teeth to powder as he prepares for the contingent election and sees whether he can bring the coonskin-capped nominee to heel before working his magic behind the scenes. Taft is expected to meet with party leader Everett Dirksen to see whether there are any more throats left to slash on the way to the finish line.",
+    "America did not expect the election of 1952 to come to this. There was a clear favorite heading into the contest, and he was sidelined by the gentleman from Whittier, California. Nixon will likely ascend to the vice presidency through the Senate no matter who is selected by the House. If there is any winner in this moment, it is Nixon."
+  ]);
+}
+
+function _kefEndingGeneralLoss() {
+  return _kefEnding("Taft Defeats Kefauver", [
+    "The results were definitive. You stayed up in hopes of a miracle and found only the cold reality. Not everyone is meant to become president. No matter what you did, your abrasiveness toward the Democratic establishment made the apparatus indifferent to your prospects of victory.",
+    "Unable to tear your eyes from the television screen, you watched as President-elect Robert Taft strode to the podium to declare victory and accept the concession telegram you sent him. The crowd boos your name. He calls for a greater understanding. Just like that, you become a footnote, someone owed a common courtesy and nothing more. It is back to Tennessee, where you will return to the Senate.",
+    "You will try again for the nomination in four years. But by then, the party bosses will have their ducks in a row, ready to smother your attempt at renomination. You fail to secure Harry Truman's blessing, and through his machinations the party elevates former Ambassador to the Soviet Union W. Averell Harriman. He defeats Richard Nixon, reasserting Democratic rule.",
+    "You can only watch as history regards you as the lone Democrat in the era of New Deal dominance to lose a general election. Harriman walks into the sun, a fate reserved for party bosses and their lackeys, but not for rugged warriors."
+  ]);
+}
+
+function _kefEndingConventionStevenson() {
+  return _kefEnding("Kefauver Defeated at the Convention, Stevenson Wins", [
+    "You traded your coonskin cap for a leather briefcase and a corner office. Stevenson may have robbed you of the White House, but he provided you a stage to showcase your crusade. The likes of Frank Costello and Meyer Lansky sweat under your gaze. J. Edgar Hoover chafes at his priorities shifting from stopping communists to combating the mob. This is your show, and Hoover can have his bottle. It will simply have less milk.",
+    "It was not all sunshine and dandelions. Your conscience left your name tarred and feathered as you pursued radical desegregation, using your showmanship to drag the South out of Jim Crow. You instigated wherever you could, and Stevenson confided to his trusted inner circle that he regretted picking you. You had the guts to do what needed to be done. If only Americans rewarded guts and not precision.",
+    "Stevenson's presidency grades positively, with historians lauding his tough organized-crime legislation and the weakening of Jim Crow. If only they knew it was you, Mr. Kefauver, who made him do it. But perhaps there is dignity in anonymity."
+  ]);
+}
+
+function _kefEndingConventionTaft() {
+  return _kefEndingWithSections("Kefauver Defeated at the Convention, Robert Taft Wins", [
+    {
+      title: "What Lies Beyond the Jersey Barriers for Richard M. Nixon",
+      paragraphs: [
+        "By Henry Luce Jr., with photographs by Alfred Eisenstaedt. Life Magazine, December 26, 1960.",
+        "In the dim glow of the Oval Office, as the winter solstice sun dips lower over the Potomac, Richard M. Nixon sits behind the Resolute Desk, his fingers drumming a quiet rhythm on a stack of farewell addresses. At 47, he is the youngest man to leave this office since Theodore Roosevelt went on safari in 1909 rather than pursue another term. Yet there is a weariness in his eyes that belies the rigors of campaigns and the weight of the office, along with a familiarity with that burden and even a fondness for it. 'I've given everything,' he says quietly, his voice carrying a familiar Quaker cadence, measured and intense. 'But America's story doesn't end with one chapter.' It is a line rehearsed for the speeches ahead, no doubt, but in this unguarded moment it hangs like a lingering question.",
+        "To his critics, Nixon is eager to trade the responsibilities of the Oval Office for lobbying. Rumors of his ties to the Pepsi-Cola Company have dogged him. To his supporters, Nixon is champing at the bit to return to his law practice in California."
+      ]
+    },
+    {
+      title: "Taft, Nixon, and the Road Not Taken",
+      paragraphs: [
+        "Nixon earned sneers as Robert Taft's hatchet man at the 1952 Republican National Convention. Though Senator Taft held the delegate lead over General Dwight D. Eisenhower, his nomination was not assured. At the eleventh hour, Nixon delivered the California delegation to Taft after Eisenhower balked at offering Nixon the vice presidency. Eisenhower's place in the liberal Eastern Establishment of the GOP led him to take Nixon's support for granted. In the end, it swept the hero of World War II into political obscurity and elevated the perennial bridesmaid Taft into the presidency.",
+        "Six months later, the son of William Howard Taft died of cancer. Nixon, at the age of 40, assumed the office. He inherited a nation humming with postwar promise and the shadow of Korea's armistice, signed mere days before Taft's passing. With Taft in the throes of his fatal battle, it was Nixon's signature on the paper that ended the conflict. 'I remember standing there at the signing,' Nixon recalls, gazing at a framed photograph on the wall showing him shaking hands with negotiators in Panmunjom. 'It felt like the weight of the world lifting, but only to settle elsewhere.'",
+        "With the war in the rearview, Nixon's focus shifted toward the domestic front. The man who once held deep disdain for domestic policy, dismissing its mundane existence as 'building outhouses in Peoria,' found himself navigating the booming years: factories churning, suburbs sprawling, and families tuning into The Donna Reed Show on new television sets. But Nixon was a man of action and sought grander theaters for his mark."
+      ]
+    },
+    {
+      title: "The Fighter Leaves the Ring",
+      paragraphs: [
+        "'Nobody believed Alger Hiss was a Communist before I was finished with him,' Nixon says off the cuff while wandering the White House halls with LIFE's photographer. He pauses, his features softening in reminiscence. In the Rose Garden, barren under December frost, he stands silent, as if pondering roads not taken.",
+        "His wife Pat snaps him out of his trance. Their daughters, Tricia and Julie, scamper about with energy, asking if they can badger the kitchen staff for lemon gelatin. Pat places an assuring hand on her husband's shoulder. 'Dick's always been a fighter,' Pat confides, handing me a cup of tea, her poise as steady as ever. 'But leaving this place, it's like closing a book you've lived in. Isn't that right, Dick?' Nixon's head snaps toward his wife, wheels turning. 'Right, Buddy.'",
+        "But the look in Nixon's eyes conveys a conflicted nature, someone wrung out by the daily rat race yet utterly addicted to its vivacious charm. At the peak of his powers, Nixon fought on multiple fronts. Some questioned his commitment to certain issues, but no one questioned his effort. With the same vigor he brought to Nikita Khrushchev in the Kitchen Debate, he pushed against Storm Thurmond to strengthen the Civil Rights Act passed in 1957.",
+        "'He was more than happy to let the baby have its bottle,' one unnamed official tells me, referring to the Southern policy of Jim Crow toward black Americans. 'But he knew the contradiction of how the United States presented itself to the world while segregating black and Mexican Americans into slums that looked more like the Third World was red meat for the communists abroad.'",
+        "While Thurmond filibustered, Nixon deployed moderate Republican Everett Dirksen and liberal Senator Hubert Humphrey to maintain a constant floor presence, ensuring quick responses and wearing down the filibusterers physically. Attaching civil-rights provisions to must-pass defense appropriations, leveraging Nixon's Cold War hawkishness, became a reverse poison pill. For Thurmond and his ilk, the nightmare scenario was realized: end segregation in the name of undermining communist agitators, or assist America's Soviet rivals.",
+        "'We couldn't let division fester,' Nixon says, his jaw set with that trademark determination. 'We stood tall,' he adds, but his voice trails. Always trails."
+      ]
+    },
+    {
+      title: "Beyond the White House",
+      paragraphs: [
+        "As the clock ticks toward January 20, when John F. Kennedy will take the oath, Nixon's thoughts drift to the future. Aware of the rumors about his lobbying for Pepsi-Cola, he speaks of returning to California, perhaps practicing law, writing, and traveling. 'There is more to contribute,' he says with a wry smile, eyes glinting with old ambition. Then he looks at his two girls, perhaps aware that they are growing up and will need their father now more than ever. 'The country is in trouble. It is always in trouble. But battles cannot be fought by the same man.' I nod and let him continue. 'To rise so high at my age, with so much time left in my life, it was a gift and a curse. What do I do now?'",
+        "When the fateful day comes and he relinquishes the duties of the presidency, the White House gates seem like the pearly gates of the Kingdom of God. Beautiful to pass through, but definitive. Nixon will step into the light, ready for what lies beyond the White House."
+      ]
+    }
+  ]);
+}
+
+endingPicker = (out, totv, aa, quickstats) => {
+  const totalEV = Number(totv) || 531;
+  const majority = Math.floor(totalEV / 2) + 1;
+  const playerEV = Number((quickstats || [])[0]) || 0;
+  const allEVs = Array.isArray(aa) ? aa.map(c => Number(c.electoral_votes) || 0) : [];
+  const topEV = Math.max(playerEV, ...allEVs, 0);
+
+  if (_kefHasAnswer([3251])) {
+    return _kefEndingConventionStevenson();
+  }
+
+  if (_kefHasAnswer([3253, 3256])) {
+    return _kefEndingConventionTaft();
+  }
+
+  if (playerEV >= majority) {
+    return _kefEndingKefauverWin();
+  }
+
+  if (topEV < majority) {
+    return _kefEndingContingent();
+  }
+
+  return _kefEndingGeneralLoss();
+};
+
+campaignTrail_temp.multiple_endings = true;
+
 
 
 
