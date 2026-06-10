@@ -44560,7 +44560,7 @@ campaignTrail_temp.answer_feedback_json = [
 
 
 campaignTrail_temp.candidate_image_url = "https://i.postimg.cc/Gmkq1jfc/kefauver.jpg";
-campaignTrail_temp.running_mate_image_url = "https://imgur.com/ZRfPiLM.png";
+campaignTrail_temp.running_mate_image_url = "https://i.postimg.cc/d1PL88Bp/kefauver-campaign.jpg";
 campaignTrail_temp.candidate_last_name = "Kefauver";
 campaignTrail_temp.running_mate_last_name = "Campaign";
 
@@ -45072,7 +45072,7 @@ campaignTrail_temp.jet_data = [{
         "canName": "Kefauver",
         "canImage": "https://i.postimg.cc/Gmkq1jfc/kefauver.jpg",
         "runName": "Campaign",
-        "runImage": "https://imgur.com/ZRfPiLM.png"
+        "runImage": "https://i.postimg.cc/d1PL88Bp/kefauver-campaign.jpg"
     },
     "nicknames": {},
     "mapping_data": {},
