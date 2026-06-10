@@ -1,0 +1,1365 @@
+campaignTrail_temp.global_parameter_json = [
+    {
+        "model": "campaign_trail.global_parameter",
+        "pk": 1,
+        "fields": {
+            "vote_variable": 1.125,
+            "max_swing": 0.12,
+            "start_point": 0.94,
+            "candidate_issue_weight": 10,
+            "running_mate_issue_weight": 3,
+            "issue_stance_1_max": -0.71,
+            "issue_stance_2_max": -0.3,
+            "issue_stance_3_max": -0.125,
+            "issue_stance_4_max": 0.125,
+            "issue_stance_5_max": 0.3,
+            "issue_stance_6_max": 0.71,
+            "global_variance": 0.01,
+            "state_variance": 0.005,
+            "question_count": 30,
+            "default_map_color_hex": "#C9C9C9",
+            "no_state_map_color_hex": "#999999"
+        }
+    }
+]
+
+
+
+
+
+
+
+
+campaignTrail_temp.election_json = [
+    {
+        "model": "campaign_trail.election",
+        "pk": 4,
+        "fields": {
+            "year": 1968,
+            "summary": "<div style='overflow-y:scroll;height:200px;'><p>The presidential election of 1952 looks to be one of the most unforgettable in American history. After two decades of Democratic dominance, and President Truman’s shocking upset of Thomas Dewey back in ’48, the tides may finally be turning. With the war in Korea dragging on and public trust in Washington wearing thin, even Truman’s own party has begun to distance itself. Meanwhile, the Republicans are banking on an ace up their sleeve.</p>\n<p>Estes Kefauver, the coonskin cap-wearing, crime-busting senator from Tennessee, has been riding high on a wave of popularity ever since his crime investigation committee put him in the national spotlight. After an impressive showing in the primaries, many believe the Democratic nomination is his to lose. But others warn that his hard-nosed crusade against corruption might make him as many enemies as allies.</p>\n<p>On the other side, “Mr. Republican” himself, Senator Robert A. Taft, stands as the face of the GOP’s old guard. He has long led the charge against the New Deal and the Fair Deal, and his Taft-Hartley Act cemented his place as a champion of conservative business interests. Taft has proven strong in the primaries and secured the nomination with ease, but his staunch isolationism and reluctance to confront global communism have some in his party uneasy.</p>",
+            "image_url": "https://imgur.com/YSd0T0O.png",
+            "winning_electoral_vote_number": 270,
+            "advisor_url": "https://imgur.com/U7w6LeA.png",
+            "recommended_reading": "<h4 style=\"margin-top: 0.5em;\">General Resources</h4><a href=\"http://uselectionatlas.org/RESULTS/national.php?year=1968\" target=\"_blank\">Final 1968 Results</a><br>Theodore White - <a href=\"http://www.amazon.com/exec/obidos/ASIN/0061900648/amhius20-20\" target=\"_blank\">The Making of the President 1968 (Landmark Political)</a><br>Rick Perlstein - <a href=\"http://www.amazon.com/exec/obidos/ASIN/B003E7ET0S/amhius20-20\" target=\"_blank\">Nixonland: The Rise of a President and the Fracturing of America</a><br><h4>By the Candidates</h4>Richard Nixon - <a href=\"http://www.amazon.com/exec/obidos/ASIN/0448143747/amhius20-20\" target=\"_blank\">The Memoirs of Richard Nixon</a><br>Hubert Humphrey - <a href=\"http://www.youtube.com/watch?v=8nwIdIUVFm4\" target=\"_blank\">1948 Civil Rights speech</a><br>George Wallace - <a href=\"https://www.youtube.com/watch?v=DcNv4aQI_QQ\" target=\"_blank\">1967 speech on dissent and intellectualism</a><br><h4>The Vietnam War</h4> Stanley Karnow - <a href=\"http://www.amazon.com/exec/obidos/ASIN/0140265473/amhius20-20\" target=\"_blank\" >Vietnam: A History</a><h4>Misceallany</h4><a href=\"http://www.jahrbuch2001.studien-von-zeitfragen.net/Weltmacht/Secret_of__68/secret_of__68.html\" target=\"_blank\">Secret of '68</a><br><a href=\"http://www.propublica.org/article/living-apart-how-the-government-betrayed-a-landmark-civil-rights-law\" target=\"_blank\">Living Apart: How the Government Betrayed a Landmark Civil Rights Law</a><br><a href=\"http://www.nytimes.com/2012/09/05/business/the-gops-journey-from-the-liberal-days-of-nixon.html\" target=\"_blank\">The G.O.P.'s Journey From the Liberal Days of Nixon</a><br><a href=\"http://www.umich.edu/~lawrace/votetour10.htm\" target=\"_blank\">George Wallace and the 1968 Election</a>",
+            "has_visits": 1,
+            "no_electoral_majority_image": "https://www.jetsimon.com/public/static/images/1968-no-majority.jpg",
+            "creator": "Dan Bryan",
+            "display_year": "Coonskins and Ballots 1952"
+        }
+    }
+]
+
+
+
+
+
+
+
+
+campaignTrail_temp.candidate_json = [
+    {
+       "model": "campaign_trail.candidate",
+        "pk": 24,
+        "fields": {
+            "first_name": "Estes",
+            "last_name": "Kefauver",
+            "election": 4,
+            "party": "Democrat",
+            "state": "Tennessee",
+            "priority": 2,
+            "description": "<p>There are few men in the United States who have had such a meteoric rise in the public eye as Carey Estes Kefauver. Starting from humble beginnings in the foothills of Appalachia, he went on to practice law before being elected to Congress and then the Senate.</p>\n<p>Kefauver embodies the American Dream, capturing the imagination of the country with a coonskin cap, a crusade against organized crime, most famously through his televised Senate hearings that transfixed the nation, and a folksy charm that seems to give everyone “Kefauver Fever.” On the issues, he has championed civil liberties, opposed the poll tax, and broken with Southern Democrats on key questions of fairness and reform.</p>\n<p>Except, of course, for the party bosses, who fear his actions against corruption might ultimately expose some dirty hands of their own. If he is to claim the nomination, Kefauver must prove he can unite a fractious party whose own machine would sooner see him lose than hand him the keys.</p>",
+            "color_hex": "#556bdd",
+            "secondary_color_hex": "#11152c",
+            "is_active": 1,
+            "image_url": "https://imgur.com/C0P69bI.png",
+            "electoral_victory_message": "<h3>Congratulations! You have won the 1952 election!</h3><p>It looked like a hopeless case when the bosses closed ranks against you, but you fought through Chicago and then fought through November.</p><p>Now you must press forward with your promise to clean up Washington, end the war in Korea honorably, and hold together a Democratic coalition that never fully trusted you. The coonskin cap has carried you to the White House; governing will be the harder test.</p>",
+            "electoral_loss_message": "<h3>Sorry, you have lost the 1952 election.</h3><p>You may have performed admirably under trying circumstances, but it was always a difficult campaign after the bruising fight for the Democratic nomination.</p><p>This is a bitter turn of events for Democrats after twenty years near the center of power. The best you can do now is return to the Senate, keep your reform reputation alive, and decide whether “Kefauver Fever” has one more campaign left in it.</p>",
+            "no_electoral_majority_message": "<h3>Wow! No candidate achieved a majority in the electoral college.</h3><p>Fortunately for you, the Democrats still have real strength in Congress. Unfortunately, many of the same bosses who tried to stop you in Chicago now have a chance to bargain over your future.</p><p>Your best chance is to hold the party together while finding enough wavering delegations to deny Taft the prize. You are the likely winner, but who knows where this all ends?</p>",
+            "description_as_running_mate": null,
+            "candidate_score": 0.7,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 23,
+        "fields": {
+            "first_name": "Robert A.",
+            "last_name": "Taft",
+            "election": 4,
+            "party": "Republican",
+            "state": "Ohio",
+            "priority": 1,
+            "description": "<p>Few men in American politics command the same reputation for principle and persistence as Senator Robert A. Taft. The son of a president, “Mr. Republican” has spent his career defending limited government, fiscal restraint, and constitutional conservatism, most concretely through the Taft-Hartley Act, which reined in union power and made him a hero to small-government conservatives nationwide.</p>\n<p>But it is foreign policy where Taft most divides his party. A committed non-interventionist, he has opposed NATO, the Korean War, and what he sees as imperial overreach dressed up as containment. With Eisenhower waiting in the wings and the internationalist wing of the GOP growing restless, Taft must convince delegates that principle, not pragmatism, is what America needs in 1952.</p>",
+            "color_hex": "#d61f1f",
+            "secondary_color_hex": "#2a0606",
+            "is_active": 1,
+            "image_url": "https://imgur.com/DjP7EMN.png",
+            "electoral_victory_message": "<h3>Congratulations! You have won the 1952 election!</h3><p>In one of the great turnarounds of American politics, you have carried the Republican old guard back to the White House and proven that “Mr. Republican” can win a national mandate.</p><p>If you can end the war in Korea, restore confidence in Washington, and govern with a Congress that may not share all your convictions, you may yet reshape the party and the country in your image.</p>",
+            "electoral_loss_message": "<h3>Sorry, you have lost the 1952 election.</h3><p>After years of fighting to bring the Republican Party back to its conservative foundations, you have come up short before the country at large.</p><p>The American public will never know what might have transpired with you in the Oval Office. As it is, the party will be left to wonder whether the old guard can ever again command a national majority.</p>",
+            "no_electoral_majority_message": "<h3>Wow! No candidate holds a majority in the electoral college.</h3><p>The election will go to the House of Representatives, where every faction in both parties will begin counting delegations and cutting deals.</p><p>You do hold some cards, however. Kefauver would rather make concessions to you than watch the process spin out of control. Perhaps you can secure assurances on Korea, spending, or the future of the New Deal before the final choice is made.</p>",
+            "description_as_running_mate": null,
+            "candidate_score": 0.666,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 25,
+        "fields": {
+            "first_name": "Vincent",
+            "last_name": "Hallinan/Others",
+            "election": 4,
+            "party": "Progressive/Others",
+            "state": "California",
+            "priority": 3,
+            "description": "<p>Vincent Hallinan fronts the scattered minor-party vote in 1952. The Progressive Party has faded badly since Henry Wallace’s run four years ago, but Hallinan, Charlotta Bass, the Prohibition ticket, and a handful of socialist and independent slates still give dissenting voters somewhere to go. They will not win electoral votes, but in a few states their protest vote is visible enough to remind both major parties that not everyone has come home.</p>",
+            "color_hex": "#45966b",
+            "secondary_color_hex": "#0d1e15",
+            "is_active": 0,
+            "image_url": "https://imgur.com/YSd0T0O.png",
+            "electoral_victory_message": "<h3>What?</h3><p>Somehow, the scattered minor-party vote has done the impossible. This should not happen in normal play.</p>",
+            "electoral_loss_message": "<h3>The minor-party vote remains minor.</h3><p>Hallinan and the other small tickets were never going to win the White House, but their showing gives a small voice to voters alienated from both major parties.</p>",
+            "no_electoral_majority_message": "<h3>No candidate holds an electoral majority.</h3><p>The major parties will decide this in Congress. Hallinan and the other minor-party campaigns have no electoral leverage, but their votes may still be read as a protest against the choices offered in 1952.</p>",
+            "description_as_running_mate": null,
+            "candidate_score": 0.01,
+            "running_mate": false
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 55,
+        "fields": {
+            "first_name": "Kenneth",
+            "last_name": "Keating",
+            "election": 4,
+            "party": "Republican",
+            "state": "New York",
+            "priority": 29,
+            "description": "n/a",
+                   "color_hex": "#d61f1f",
+            "secondary_color_hex": "#2a0606",
+            "is_active": 0,
+            "image_url": "https://imgur.com/o403xu8.png",
+            "electoral_victory_message": "n/a",
+            "electoral_loss_message": "n/a",
+            "no_electoral_majority_message": "n/a",
+            "description_as_running_mate": "<p>Congressman Kenneth Keating is a bright and articulate lawmaker from New York with a reputation for toughness on communism. His legal background and emphasis on national security make him popular among younger, anti-communist conservatives. However, Keating’s limited experience and relatively small following outside his home state could make him a hard sell on the national stage. He would bring intellect and vigor to the ticket, but at the cost of experience and broader appeal.</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 56,
+        "fields": {
+            "first_name": "Joseph M.",
+            "last_name": "Martin",
+            "election": 4,
+            "party": "Republican",
+            "state": "New York",
+            "priority": 30,
+            "description": "n/a",
+                   "color_hex": "#d61f1f",
+            "secondary_color_hex": "#2a0606",
+            "is_active": 0,
+            "image_url": "https://imgur.com/2CZ5NbA.png",
+            "electoral_victory_message": "n/a",
+            "electoral_loss_message": "n/a",
+            "no_electoral_majority_message": "n/a",
+            "description_as_running_mate": "<p>Speaker of the House Joseph Martin is a veteran lawmaker with deep roots in the Republican establishment. He is respected for his stability, loyalty, and years of leadership experience. Martin’s working-class background and pragmatic outlook could help Taft appeal to Northern industrial voters. However, his low-key personality and lack of national charisma make him an unexciting choice for the campaign trail. Selecting Martin would add steadiness to the ticket, but little in the way of energy or innovation.</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 44,
+        "fields": {
+            "first_name": "Margaret Chase",
+            "last_name": "Smith",
+            "election": 4,
+            "party": "Republican",
+            "state": "Maine",
+            "priority": 31,
+            "description": "n/a",
+                   "color_hex": "#d61f1f",
+            "secondary_color_hex": "#2a0606",
+            "is_active": 0,
+            "image_url": "https://imgur.com/CMkEzeh.png",
+            "electoral_victory_message": "n/a",
+            "electoral_loss_message": "n/a",
+            "no_electoral_majority_message": "n/a",
+            "description_as_running_mate": "<p>Senator Margaret Chase Smith of Maine is one of the most respected voices in Congress and a pioneer for women in American politics. Known for her integrity and independence, she earned national admiration for condemning McCarthyism when few others dared to. Adding her to the ticket would symbolize honesty, decency, and historic progress for the GOP. Yet her moderate views could alienate Taft’s conservative base. She would be a courageous and groundbreaking choice, but one that might split the party’s right wing.</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 57,
+        "fields": {
+            "first_name": "Arthur",
+            "last_name": "Langlie",
+            "election": 4,
+            "party": "Republican",
+            "state": "Washington",
+            "priority": 32,
+            "description": "n/a",
+                   "color_hex": "#d61f1f",
+            "secondary_color_hex": "#2a0606",
+            "is_active": 0,
+            "image_url": "https://imgur.com/SwIJAGj.png",
+            "electoral_victory_message": "n/a",
+            "electoral_loss_message": "n/a",
+            "no_electoral_majority_message": "n/a",
+            "description_as_running_mate": "<p>Governor Arthur Langlie of Washington represents a younger, modern face within the GOP. A competent administrator with a reputation for efficiency, Langlie appeals to the growing suburban and middle-class voters of the West. His moderate record could help soften Taft’s image and broaden the ticket’s appeal. Still, his lack of national profile and mild public persona might fail to capture voters’ attention. Langlie would be a safe, sensible choice, though not a particularly bold one.</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 58,
+        "fields": {
+            "first_name": "Franklin",
+            "last_name": "Roosevelt Jr.",
+            "election": 4,
+            "party": "Democrat",
+            "state": "New York",
+            "priority": 33,
+            "description": "n/a",
+                   "color_hex": "#556bdd",
+            "secondary_color_hex": "#11152c",
+            "is_active": 0,
+            "image_url": "https://imgur.com/S6mtBe9.png",
+            "electoral_victory_message": "n/a",
+            "electoral_loss_message": "n/a",
+            "no_electoral_majority_message": "n/a",
+            "description_as_running_mate": "<p>Congressman Franklin Roosevelt Jr. carries one of the most famous names in American politics. A Navy veteran and the son of the late president, he represents both the legacy and future of the Democratic Party. His youth and charisma could energize younger voters and rekindle the Roosevelt spirit. However, critics see him as inexperienced and too dependent on his family’s name. Choosing him would be a gamble, one that banks on nostalgia and name recognition rather than proven leadership.</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 59,
+        "fields": {
+            "first_name": "Paul",
+            "last_name": "Douglas",
+            "election": 4,
+            "party": "Democrat",
+            "state": "Illinois",
+            "priority": 34,
+            "description": "n/a",
+                   "color_hex": "#556bdd",
+            "secondary_color_hex": "#11152c",
+            "is_active": 0,
+            "image_url": "https://imgur.com/hkPrdib.png",
+            "electoral_victory_message": "n/a",
+            "electoral_loss_message": "n/a",
+            "no_electoral_majority_message": "n/a",
+            "description_as_running_mate": "<p>Douglas is a Democratic senator from Illinois and one of the leading voices of the party’s liberal wing. A decorated Marine veteran from the Second World War and a former economics professor at the University of Chicago, Douglas has built his reputation on integrity, reform, and fighting against corruption in both parties. He is well-liked among labor unions, progressives, and academics who see him as the conscience of the Senate.</p>\n<p>However, his stern moralism and uncompromising style have earned him a few enemies, even within his own ranks. Many Southern Democrats are deeply suspicious of his outspoken support for civil rights and campaign finance reform, while some party bosses worry he lacks the charm or flexibility needed to unite the ticket. Still, his honesty, wartime heroism, and populist streak could give the campaign a powerful sense of credibility, especially among independent voters tired of backroom politics.</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 60,
+        "fields": {
+            "first_name": "G. Mennen",
+            "last_name": "Williams",
+            "election": 4,
+            "party": "Democrat",
+            "state": "Michigan",
+            "priority": 35,
+            "description": "n/a",
+            "color_hex": "#0000FF",
+            "secondary_color_hex": "#90C0FF",
+            "is_active": 0,
+            "image_url": "https://imgur.com/6GGvRhQ.png",
+            "electoral_victory_message": "n/a",
+            "electoral_loss_message": "n/a",
+            "no_electoral_majority_message": "n/a",
+            "description_as_running_mate": "<p>Governor “Soapy” Williams of Michigan is an energetic and outspoken liberal known for his trademark green bow tie and strong ties to organized labor. He is well-liked in the industrial Midwest and among progressives who admire his stance on civil rights and social welfare. However, his flamboyant style and unapologetic liberalism could alienate Southern Democrats and conservative voters. Selecting him would bring life to the campaign, but might risk dividing the party along regional and ideological lines.</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    },
+    {
+        "model": "campaign_trail.candidate",
+        "pk": 61,
+        "fields": {
+            "first_name": "John W.",
+            "last_name": "McCormack",
+            "election": 4,
+            "party": "Democrat",
+            "state": "Massachusetts",
+            "priority": 36,
+            "description": "n/a",
+                   "color_hex": "#556bdd",
+            "secondary_color_hex": "#11152c",
+            "is_active": 0,
+            "image_url": "https://imgur.com//eGitZgP.png",
+            "electoral_victory_message": "n/a",
+            "electoral_loss_message": "n/a",
+            "no_electoral_majority_message": "n/a",
+            "description_as_running_mate": "<p>John W. McCormack of Massachusetts is a classic party loyalist with deep ties to labor and urban Catholic voters. McCormack represents the kind of steady, disciplined leadership that has kept the Democratic machine running strong through two decades of power. His working-class Boston roots and old-school charm make him a reliable bridge between Northern liberals and the party’s traditional base.</p>\n<p>However, his long career in the House and reputation as a behind-the-scenes operator may make him seem too cautious for a campaign built on reform. He is respected, but not exactly electrifying. Some fear his insider image and alignment with the old Truman establishment could turn off independent voters hungry for change. Still, McCormack’s experience, party loyalty, and command of Capitol Hill could give the ticket much-needed stability and credibility where it counts most, in Washington itself.</p>",
+            "candidate_score": 0,
+            "running_mate": true
+        }
+    }
+]
+
+
+
+
+
+
+
+
+campaignTrail_temp.running_mate_json = [
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 37,
+        "fields": {
+            "candidate": 24,
+            "running_mate": 58
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 40,
+        "fields": {
+            "candidate": 24,
+            "running_mate": 61
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 39,
+        "fields": {
+            "candidate": 24,
+            "running_mate": 60
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 38,
+        "fields": {
+            "candidate": 24,
+            "running_mate": 59
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 33,
+        "fields": {
+            "candidate": 23,
+            "running_mate": 55
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 34,
+        "fields": {
+            "candidate": 23,
+            "running_mate": 44
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 35,
+        "fields": {
+            "candidate": 23,
+            "running_mate": 56
+        }
+    },
+    {
+        "model": "campaign_trail.running_mate",
+        "pk": 36,
+        "fields": {
+            "candidate": 23,
+            "running_mate": 57
+        }
+    }
+]
+
+
+
+
+
+
+
+
+campaignTrail_temp.credits = "U/FitAD5739"
+
+
+
+
+
+
+
+
+campaignTrail_temp.opponents_default_json = [
+    {
+        "election": 4,
+        "candidates": [
+            23,
+            24,
+            25
+        ]
+    }
+]
+
+
+
+
+
+
+
+
+campaignTrail_temp.opponents_weighted_json = [
+    {
+        "election": 4,
+        "candidates": [
+            23,
+            24,
+            25
+        ]
+    }
+]
+
+
+
+
+
+
+
+
+campaignTrail_temp.temp_election_list = [
+    {
+        "id": 4,
+        "year": 1968,
+        "is_premium": 0,
+        "display_year": "Coonskins and Ballots 1952"
+    }
+]
+
+
+
+
+
+
+
+
+jet_data = {
+    "headerColor": "#2e4976",
+    "windowColor": "#333c42",
+    "containerColor": "#2f557f",
+    "innerWindowColor": "#4e6165",
+    "bannerImageUrl": "https://imgur.com/9PdCbBD.png",
+    "backgroundImageUrl": "https://imgur.com/O4Iim50.png",
+    "endingTextColor": "#000000",
+    "customQuote": ""
+}
+
+
+
+
+
+
+
+
+//#startcode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#2e4976";
+
+
+
+
+
+
+
+let style = document.createElement('style');
+style.type = 'text/css';
+style.id = 'dynamic-style';
+
+
+style.innerHTML = `
+  .campaign_trail_start_emphasis {
+    background-color: #333C42;
+  }
+  #state_info h3 {
+    background-color: #2e4976;
+  }
+  #state_result h3 {
+    background-color: #2e4976;
+  }
+  #overall_result h3 {
+    background-color: #2e4976;
+  }
+  #campaign_sign {
+    background-image: url("https://imgur.com/9PdCbBD.png");
+    background-size: cover;
+    border-color: #C9C9C9;
+    border-width: .01em;
+    margin: 0 auto;
+    background-position: center;
+    width: 100%;
+    height: 104px;
+    margin-left: -0.033em;
+    margin-right: -0.033em;
+  }
+  #campaign_sign p {
+    color: rgb(0 0 0 / 0%);
+  }
+  .inner_window_sign_display {
+    margin: 0;
+    margin-right: 0.033px;
+    margin-left: 0.033px;
+    height: 28%;
+    position: relative;
+    width: 35%;
+    background-color: #F8F8F8;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: double;
+    border-color: #C9C9C9;
+  }
+  #map_footer {
+    padding-top: 3em;
+  }
+  .overlay_window h3 {
+    background-color: #c1c4c6;
+  }
+  .inner_window_question h3 {
+    background-color: #c1c4c6;
+  }
+  #overall_result_container {
+    background-color: #333c42;
+  }
+  #state_result_container {
+    background-color: #333c42;
+  }
+  #map_container {
+    background: #F8F8F8;
+    border-radius: 1px;
+    box-shadow:
+      inset 0 0 4px rgba(0, 0, 0, 0.08),
+      0 0 0 2px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+  }
+  .overlay_window {
+    height: auto;
+  }
+  #menu_container {
+    background-color: #333c42 !important;
+  }
+  a:-webkit-any-link {
+    color: #000000;
+  }
+`;
+
+
+document.head.appendChild(style);
+
+
+
+
+
+
+
+
+nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#333c42";
+
+
+
+
+
+
+
+
+document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
+
+
+
+
+
+
+
+
+$("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
+
+
+
+
+
+
+
+
+$(".container")[0].style.backgroundColor = "#2f557f";
+
+
+
+
+
+
+
+
+document.getElementById("header").src = "https://imgur.com/9PdCbBD.png";
+
+
+
+
+
+
+
+
+document.body.background = "https://imgur.com/O4Iim50.png";
+
+
+
+
+
+
+
+document.body.style.backgroundSize = "cover";
+
+
+
+
+
+
+
+
+document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#4e6165!important;}</style>";
+
+
+
+
+
+
+
+
+//#endcode
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Initialise custom music
+
+
+
+
+
+
+
+
+$("#music_player")[0].children[0].style.display="none"
+$("#music_player")[0].children[1].style.display="none"
+
+
+
+
+
+
+
+
+document.getElementById("modLoadReveal").style.display="none"
+document.getElementById("modloaddiv").style.display="none"
+
+
+
+
+
+
+
+
+musicBox = document.getElementById("music_player")
+musicBox.style.display=""
+
+
+
+
+
+
+
+
+var trackSel;
+e = campaignTrail_temp
+e.selectedSoundtrack = 0
+
+
+
+
+
+
+
+
+toTime = (seconds) => {
+  var date = new Date(null);
+  date.setSeconds(seconds);
+  return date.toISOString().substr(11, 8);
+}
+
+
+
+
+
+
+
+
+generateTime = () => {
+    // Get the audio element
+    var audio = document.getElementById("campaigntrailmusic");
+
+
+
+
+
+
+
+
+    timeTracker = document.createElement("div");
+    timeTracker.style = `
+      text-align:left;
+      border-style:solid;
+      border-width:3px;
+      height:150px;
+      width:200px;
+      background-color:#999999;
+      float:right;
+      padding: 10px;
+    `
+    $("#trackSelParent")[0].prepend(timeTracker);
+    $("#trackSelParent")[0].prepend(document.createElement("br"));
+
+
+
+
+
+
+
+
+    // Create a new element to display the current position of the audio
+    var positionDisplay = document.createElement("gg");
+    positionDisplay.id = "position-display";
+
+
+
+
+
+
+
+
+    // Create a new slider element to change the time
+    var timeSlider = document.createElement("input");
+    timeSlider.type = "range";
+    timeSlider.min = 0;
+    timeSlider.max = 1;
+    timeSlider.step = 0.001;
+    timeSlider.value = 0;
+    timeSlider.style.width = "200px";
+    timeSlider.id = "time-slider";
+
+
+
+
+
+
+
+
+    var pausePlay = document.createElement("button");
+    pausePlay.id = "position-display";
+    pausePlay.innerHTML = "<b>Pause</b>"
+    pausePlay.style.width = "100%";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    pausePlay.addEventListener("click", event => {
+      event.preventDefault();
+      updatePositionDisplay();
+      let audio = document.getElementById("campaigntrailmusic");
+      if (audio.paused) {
+        audio.play();
+        event.target.innerHTML = "<b>Pause</b>";
+        return;
+      }
+      audio.pause();
+      event.target.innerHTML = "<b>Play</b>";
+      return;
+    })
+
+
+
+
+
+
+
+
+    var volumeLabel = document.createElement("gg");
+    volumeLabel.id = "volume-label";
+    volumeLabel.innerHTML = "<br><b>Volume: </b>"
+
+
+
+
+
+
+
+
+    var volumeSlider = document.createElement("input");
+    volumeSlider.type = "range";
+    volumeSlider.min = 0;
+    volumeSlider.max = 1;
+    volumeSlider.step = 0.001;
+    volumeSlider.value = 0;
+    volumeSlider.style.width = "200px";
+    volumeSlider.id = "volume-slider";
+
+
+
+
+
+
+
+
+    volumeSlider.value = audio.volume;
+
+
+
+
+
+
+
+
+    timeTracker.appendChild(pausePlay);
+    timeTracker.appendChild(document.createElement("br"));
+    timeTracker.appendChild(document.createElement("br"));
+    timeTracker.appendChild(positionDisplay);
+    timeTracker.appendChild(timeSlider);
+    timeTracker.appendChild(volumeLabel);
+    timeTracker.appendChild(volumeSlider);
+
+
+
+
+
+
+
+
+    updatePositionDisplay();
+
+
+
+
+
+
+
+
+    //for (let i = 0; i < 10; i++)
+    //timeTracker.append(document.createElement("br"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Function to update the position display
+    function updatePositionDisplay() {
+      positionDisplay.innerHTML = "<b>Time:</b> " + toTime(audio.currentTime) + "<br>";
+      timeSlider.value = audio.duration ? audio.currentTime / audio.duration : 0;
+    }
+
+
+
+
+
+
+
+
+    // Function to change the time of the audio
+    function changeTime() {
+      positionDisplay.innerHTML = "<b>Time:</b> " + toTime(audio.currentTime) + "<br>";
+      audio.currentTime = timeSlider.value * audio.duration;
+    }
+
+
+
+
+
+
+
+
+    updateVolume = event => {
+      audio.volume = event.target.value;
+    }
+    
+    // Update the position display and slider every second
+    setInterval(updatePositionDisplay, 1000);
+
+
+
+
+
+
+
+
+    // Listen for changes to the time slider and change the time of the audio
+    timeSlider.addEventListener("input", changeTime);
+    volumeSlider.addEventListener("input", updateVolume)
+}
+
+
+
+
+
+
+
+
+function newMusicPlayer() {
+  trackSel = document.createElement("div");
+  trackSel.id = "trackSelParent"
+  let z = `<br><br><br><br><br><br><br><br><br><br><div id='trackSel' style="text-align:left;border-style:solid;border-width:3px;overflow-y: scroll;overflow-x: hidden;height:200px; width:400px;background-color:#999999;float:right;">`
+  z += `<b><select id='selectSoundtrack'><option value='`+soundtracks[e.selectedSoundtrack].name+`'>`+soundtracks[e.selectedSoundtrack].name+"</option>"
+  for (i in soundtracks) {
+    if (soundtracks[e.selectedSoundtrack] != soundtracks[i]) {
+      z += `<option value='`+soundtracks[i].name+`'>`+soundtracks[i].name+`</option>`
+    }
+  }
+  z += `</select></b><br><br>`
+  // <label><input type="radio" name="option" value="option1">Option 1</label><br>
+  for (i in soundtracks[e.selectedSoundtrack].tracklist) {
+    let a = soundtracks[e.selectedSoundtrack].tracklist[i]
+    let b = `<label><input class="trackSelector" type="radio" name="trackSelector" value="`+i+`">`+a.name+`</label><br>`
+    z += b
+  }
+  z += "</div><br><br>"
+  trackSel.innerHTML = z
+
+
+
+
+
+
+
+
+  // select correct song
+
+
+
+
+
+
+
+
+  musicBox.appendChild(trackSel);
+  Array.from(document.getElementById("trackSel").children).filter(f=>{
+    return f.tagName == "LABEL"
+  }).map(f=>f.children[0])[0].checked = true
+
+
+
+
+
+
+
+
+  // set soundtrack changer
+
+
+
+
+
+
+
+
+  soundtrackSelector = document.getElementById("selectSoundtrack")
+  soundtrackSelector.onchange = function() {
+    for (i in soundtracks) {
+      if (soundtracks[i].name == soundtrackSelector.value) {
+        e.selectedSoundtrack = i
+        break
+      }
+    }
+    document.getElementById("trackSelParent").remove()
+    newMusicPlayer()
+  }
+
+
+
+
+
+
+
+
+  var matches = document.querySelectorAll('.trackSelector');
+
+
+
+
+
+
+
+
+  for (match in matches) {
+    matches[match].onchange = function() {
+      audio = $("#campaigntrailmusic")[0];
+      audio.src = soundtracks[e.selectedSoundtrack].tracklist[this.value].url
+      audio.currentTime = 0
+    }
+  }
+
+
+
+
+
+
+
+
+  musicBox.children[2].loop = false
+  musicBox.children[2].src = soundtracks[e.selectedSoundtrack].tracklist[0].url
+
+
+
+
+
+
+
+
+  musicBox.children[2].onended = function() {
+    console.log("next track")
+    let selected = Number(document.querySelector('input[name="trackSelector"]:checked').value);
+    let newSel = clamp(selected+1, soundtracks[e.selectedSoundtrack].tracklist.length-1, 0)
+    let buttons = Array.from(document.getElementById("trackSel").children).filter(f=>{
+      return f.tagName == "LABEL"
+    }).map(f=>f.children[0])
+    //let selectedIndex = buttons.map(f=>f.children[0]).map(f=>f.checked)
+    buttons[newSel].click()
+  }
+
+
+
+
+
+
+
+
+  for (w = 0; w < 7; w++) {
+    document.getElementById("trackSelParent").appendChild(document.createElement("br"))
+  }
+  
+  generateTime();
+}
+
+
+
+
+
+
+
+
+clamp = function(a, max, min, overflow=true) {
+  if (overflow) {
+    return a > max ? min : a < min ? max : a;
+  }
+  return a > max ? max : a < min ? min : a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Track list
+
+
+
+
+
+
+
+
+var soundtracks = {
+  0: {
+    name: "Opening",
+    tracklist: [
+      {
+        "name": "Senator From Tennessee",
+        "url": "https://audio.jukehost.co.uk/715vacjVWAiTL8lBttdmNpKUsAUPfnOv"
+      },
+    ]
+  },
+  1: {
+    name: "Kefauver on the March",
+    tracklist: [
+      {
+        "name": "Hank Williams Sr. - Jambalaya (On the Bayou)",
+        "url": "https://audio.jukehost.co.uk/RxWvuxdhYe1U8L5nd6PreRyWAYXTt2OB"
+      },
+      {
+        "name": "Hank Williams Sr. - Hey, Good Lookin’",
+        "url": "https://audio.jukehost.co.uk/RCiH1QS9u4aXskZRzf8eKYG24G9eEgcx"
+      },
+      {
+        "name": "Patti Page - Tennessee Waltz",
+        "url": "https://audio.jukehost.co.uk/1uiqxxHgsrQ3Ya4O3MWhYOaU0qoa6BOi"
+      },
+      {
+        "name": "Lead Belly - Goodnight Irene",
+        "url": "https://audio.jukehost.co.uk/MUsrAQOwWdSA4wuRi4qiq4uZcmjpNO59"
+      },    
+      {
+        "name": "Hank Snow - I’ve Been Everywhere",
+        "url": "https://audio.jukehost.co.uk/FXVofWLFLjwcSWiZqkPYz5ZXKf7ZqxLb"
+      },      
+    ]
+  },      
+  2: {
+    name: "Mr. Republican: Songs of Duty and Resolve",
+    tracklist: [
+      {
+        "name": "Tex Ritter - High Noon",
+        "url": "https://audio.jukehost.co.uk/avLyWV5JLLN9gbgYjXd0qx2nB4iJV20Q"
+      },
+      {
+        "name": "Tony Bennett - Because of You",
+        "url": "https://audio.jukehost.co.uk/pwHSvGCw3DLjhyC1RT0QtnSTVi3RAzZJ"
+      },
+      {
+        "name": "Eddie Arnold - Any Time",
+        "url": "https://audio.jukehost.co.uk/HjQYbxKHRlU53pn5mDYdyFczxKfCazq0"
+      },
+      {
+        "name": "Bing Crosby - Dear Hearts and Gentle People",
+        "url": "https://audio.jukehost.co.uk/BdSTB5de7z9VY4pzjSRHc7rRqyxC8pL0"
+      },      
+      {
+        "name": "Tommy Edwards - It’s All in the Game",
+        "url": "https://audio.jukehost.co.uk/AjnLeLziox9vwQIAEnbPveeaFsJRZZbS"
+      },      
+    ]
+  },
+  3: {
+    name: "Those Good Ol’ Tunes from ’52",
+    tracklist: [
+      {
+        "name": "Leroy Anderson - Blue Tango",
+        "url": "https://audio.jukehost.co.uk/xjHwG3Mfi52rQGJ41lhvDuH2rV77P4xe"
+      },
+      {
+        "name": "Al Martino - Here in My Heart",
+        "url": "https://audio.jukehost.co.uk/gu1qyYSZJzBeNFVfLazOMHbDp6JGfyvI"
+      },
+      {
+        "name": "Jo Stafford - You Belong to Me",
+        "url": "https://audio.jukehost.co.uk/RxWvuxdhYe1U8L5nd6PreRyWAYXTt2OB"
+      },
+      {
+        "name": "Rosemary Clooney - Half as Much",
+        "url": "https://audio.jukehost.co.uk/1uiqxxHgsrQ3Ya4O3MWhYOaU0qoa6BOi"
+      },  
+      {
+        "name": "Johnny Ray - Cry",
+        "url": "https://audio.jukehost.co.uk/mYXJAAuhtjLEqiGaNs3FjuUdbu4rvasK"
+      },     
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+// Set up new music player
+
+
+
+
+
+
+
+
+newMusicPlayer()
+
+
+
+
+
+
+
+
+if (!e.done) {
+e.done = true;
+
+
+
+
+
+
+
+
+// paste the rest of your code 1 here - it has to be wrapped around the "if (!e.done)" line for it to work on the loader
+
+
+
+
+
+
+
+
+styling = document.createElement("style");
+document.head.appendChild(styling);
+
+
+
+
+
+
+
+
+styling.innerHTML = `
+#opponent_selection_id_back {
+    display: none;
+}
+`
+
+
+
+
+
+
+
+
+let z = new MutationObserver((mutationsList, observer) => {
+    let runningMateSummary = document.querySelector("#running_mate_summary");
+    if (runningMateSummary) {
+        $("#running_mate_id_button").click();
+        observer.disconnect()
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+z.observe(document, { subtree: true, childList: true });
+
+
+
+
+
+
+
+
+}
+
+
